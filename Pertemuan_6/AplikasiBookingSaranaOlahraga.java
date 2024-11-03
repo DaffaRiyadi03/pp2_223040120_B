@@ -18,12 +18,10 @@ public class AplikasiBookingSaranaOlahraga {
         frame = new JFrame("Aplikasi Booking Sarana Olahraga");
         frame.setLayout(new BorderLayout(10, 10));
 
-        // Create Menu Bar
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("File");
         JMenuItem exitMenuItem = new JMenuItem("Exit");
         
-        // Exit Action
         exitMenuItem.addActionListener(e -> System.exit(0));
         
         fileMenu.add(exitMenuItem);
