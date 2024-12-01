@@ -1,0 +1,37 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.MemberMapper">
+    
+<!--    <insert id="insert" parameterType="model.Member">
+        INSERT INTO member (id, nama, jenis_member_id)
+        VALUES (#{id}, #{nama}, #{jenisMemberId})
+    </insert>-->
+    
+<!--    <update id="update" parameterType="model.Member">
+        UPDATE member
+        SET nama = #{nama}, jenis_member_id = #{jenisMemberId}
+        WHERE id = #{id}
+    </update>-->
+    
+<!--    <delete id="delete" parameterType="model.Member">
+        DELETE FROM member
+        WHERE id = #{id}
+    </delete>-->
+    
+<!--    <select id="findAll" resultMap="MemberResult">
+        SELECT * FROM member
+    </select>-->
+    
+    <resultMap id="MemberResult" type="model.Member">
+        <id property="id" column="id"/>
+        <result property="nama" column="nama"/>
+        <association property="jenisMember" column="jenis_member_id" javaType="model.JenisMember" select="getJenisMember"/>
+    </resultMap>
+    
+    <select id="getJenisMember" parameterType="String" resultType="model.JenisMember">
+        SELECT * FROM jenis_member
+        WHERE id = #{jenisMemberId}
+    </select>
+
+</mapper>
