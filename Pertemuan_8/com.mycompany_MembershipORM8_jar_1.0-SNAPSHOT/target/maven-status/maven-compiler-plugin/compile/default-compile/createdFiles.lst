@@ -1,0 +1,17 @@
+dao\JenisMemberDao.class
+dao\MemberDao.class
+mapper\JenisMemberMapper.class
+com\mycompany\membershiporm8\MembershipORM8.class
+view\main\MainFrame.class
+view\member\MemberFrame.class
+mapper\MemberMapper.class
+view\main\MainButtonActionListener.class
+model\JenisMember.class
+view\jenismember\JenisMemberButtonSimpanActionListener.class
+main\Main.class
+model\Member.class
+view\member\MemberTableModel$memberList.class
+view\jenismember\JenisMemberTableModel.class
+view\member\MemberButtonSimpanActionListener.class
+view\member\MemberTableModel.class
+view\jenismember\JenisMemberFrame.class
